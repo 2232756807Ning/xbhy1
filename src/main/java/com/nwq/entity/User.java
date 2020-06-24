@@ -1,8 +1,12 @@
 package com.nwq.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class User implements Serializable {
+    private String deptName;
+
+
     private Integer id;
     private String username;
     private String password;
@@ -12,9 +16,9 @@ public class User implements Serializable {
     private String realName;
     private Integer age;
     private String phone;
-    private String gender;
-    private String desc;
-    private String registerTime;
+    private Integer sex;
+    private String description;
+    private Date registerTime;
     private String loginTime;
     private String pic;
     private Integer look;
@@ -93,27 +97,27 @@ public class User implements Serializable {
         this.phone = phone;
     }
 
-    public String getGender() {
-        return gender;
+    public Integer getSex() {
+        return sex;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setSex(Integer sex) {
+        this.sex = sex;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getRegisterTime() {
+    public Date getRegisterTime() {
         return registerTime;
     }
 
-    public void setRegisterTime(String registerTime) {
+    public void setRegisterTime(Date registerTime) {
         this.registerTime = registerTime;
     }
 
@@ -155,5 +159,13 @@ public class User implements Serializable {
 
     public void setDeptId(Integer deptId) {
         this.deptId = deptId;
+    }
+
+    public String getDeptName() {
+        return deptName;
+    }
+
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
     }
 }
